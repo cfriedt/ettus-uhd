@@ -13,13 +13,9 @@ These entries give permissions for the `buildkite-agent` user to call the script
 given root privileges and therefore, some caution should be taken inside of the scripts themselves.
 
 The scripts below should be installed at `/usr/bin` on the machine where `buildkite-agent` is installed. They should be called
-within the following hooks (contained within the repository):
+within the following hooks:
 
-* `.buildkite/hooks/post-command`
-* `.buildkite/hooks/post-exit`
-
-The scripts below should also be called from /etc/buildkite-agent/hooks/environment, as it seems that's the only place where
-they can be called prior to cleaning up `${BUILDKITE_BUILD_CHECKOUT_PATH}`.
+* `/etc/buildkite-agent/hooks/environment`
 
 ## fix-buildkite-agent-ccache-permissions
 
