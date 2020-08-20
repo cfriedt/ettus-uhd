@@ -1,0 +1,6 @@
+steps:
+  - command:
+    - sh .buildkite/run.sh
+    plugins:
+      - docker#v3.5.0:
+          image: cfriedt/uhd:focal
