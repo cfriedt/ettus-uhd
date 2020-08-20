@@ -1,7 +1,10 @@
 #!/bin/sh
 
-export PATH=/usr/lib/ccache:${PATH}
+export PATH=/usr/lib/ccache:"${PATH}"
 PREFIX=/usr/local
+
+echo "gcc: $(which gcc)"
+echo "g++: $(which g++)"
 
 mkdir -p host/build
 cd host/build
