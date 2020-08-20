@@ -1,10 +1,16 @@
 #!/bin/sh
 
+# Coerce CMake to use gcc and g++ from ccache, if available
+# https://stackoverflow.com/a/17275650
 export PATH=/usr/lib/ccache:"${PATH}"
+export CC="$(which gcc)"
+export CXX="$(which g++)"
+
+# we're doing a non-install build (for now) so use /usr/local
 PREFIX=/usr/local
 
-echo "gcc: $(which gcc)"
-echo "g++: $(which g++)"
+echo "CC: ${CC}"
+echo "CXX: ${CXX}"
 
 mkdir -p host/build
 cd host/build
