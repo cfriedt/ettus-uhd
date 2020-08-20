@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export PATH=/usr/lib/ccache:${PATH}
 PREFIX=/usr/local
 
 mkdir -p host/build

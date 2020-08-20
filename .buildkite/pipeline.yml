@@ -4,3 +4,6 @@ steps:
     plugins:
       - docker#v3.5.0:
           image: cfriedt/uhd:focal
+          propogate-environment: true
+          volumes:
+            - "/var/lib/buildkite-agent/.ccache:/root/.ccache"
