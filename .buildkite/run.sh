@@ -11,6 +11,8 @@ PREFIX=/usr/local
 
 echo "CC: ${CC}"
 echo "CXX: ${CXX}"
+echo "ccache:"
+ccache -p
 
 mkdir -p host/build
 cd host/build
